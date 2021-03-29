@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -95,6 +95,7 @@
 				DA2398932607D2E90037199E /* watchOS Framework Test WatchKit App */,
 				DA23989F2607D2EA0037199E /* watchOS Framework Test WatchKit Extension */,
 				DA23988C2607D2E90037199E /* Products */,
+				DA2398C62607D9240037199E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,6 +142,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		DA2398C62607D9240037199E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,6 +165,9 @@
 				DA2398922607D2E90037199E /* PBXTargetDependency */,
 			);
 			name = "watchOS Framework Test";
+			packageProductDependencies = (
+				DA2398C22607D33B0037199E /* NavigationStack */,
+			);
 			productName = "watchOS Framework Test";
 			productReference = DA23988B2607D2E90037199E /* watchOS Framework Test.app */;
 			productType = "com.apple.product-type.application.watchapp2-container";
@@ -191,6 +202,8 @@
 			dependencies = (
 			);
 			name = "watchOS Framework Test WatchKit Extension";
+			packageProductDependencies = (
+			);
 			productName = "watchOS Framework Test WatchKit Extension";
 			productReference = DA23989B2607D2EA0037199E /* watchOS Framework Test WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
@@ -224,6 +237,9 @@
 				Base,
 			);
 			mainGroup = DA2398842607D2E90037199E;
+			packageReferences = (
+				DA2398C12607D33B0037199E /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */,
+			);
 			productRefGroup = DA23988C2607D2E90037199E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -559,6 +575,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DA2398C12607D33B0037199E /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/matteopuc/swiftui-navigation-stack.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DA2398C22607D33B0037199E /* NavigationStack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA2398C12607D33B0037199E /* XCRemoteSwiftPackageReference "swiftui-navigation-stack" */;
+			productName = NavigationStack;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DA2398852607D2E90037199E /* Project object */;
 }
